@@ -1,6 +1,3 @@
-/////////////////////////////////////////////////////////////////////
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-/////////////////////////////////////////////////////////////////////
 
 $('.page-scroll').bind('click', function(event) {
     var $anchor = $(this);
@@ -9,12 +6,6 @@ $('.page-scroll').bind('click', function(event) {
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
 });
-
-
-
-////////////////////////////////////////////////////////////////////////
-// On-Scroll Animated Header: https://github.com/codrops/AnimatedHeader
-////////////////////////////////////////////////////////////////////////
 
 var cbpAnimatedHeader = (function() {
 
@@ -51,36 +42,16 @@ var cbpAnimatedHeader = (function() {
 
 })();
 
-
-
-//////////////////////////////////////////////
-// Highlight the top nav as scrolling occurs
-//////////////////////////////////////////////
-
 $('body').scrollspy({
     target: '.navbar',
     offset: 65
 })
 
-
-
-///////////////////////////////////////////
-// Display loading image while page loads
-///////////////////////////////////////////
-
-// Wait for window load
 $(window).load(function() {
-    // Animate loader off screen
+    
     $(".page-loader").fadeOut("slow");
 });
 
-
-
-////////////////////////////////////////////////////
-// OWL Carousel: http://owlgraphic.com/owlcarousel
-////////////////////////////////////////////////////
-
-// Intro text carousel
 $("#owl-intro-text").owlCarousel({
     singleItem : true,
     autoPlay : 6000,
@@ -90,8 +61,6 @@ $("#owl-intro-text").owlCarousel({
     pagination : true
 })
 
-
-// Partner carousel
 $("#owl-partners").owlCarousel({
     items : 4,
     itemsDesktop : [1199,3],
@@ -102,48 +71,25 @@ $("#owl-partners").owlCarousel({
     pagination : false
 })
 
-// Testimonials carousel
 $("#owl-testimonial").owlCarousel({
     singleItem : true,
     pagination : true,
     autoHeight : true
 })
 
-
-////////////////////////////////////////////////////////////////////
-// Stellar (parallax): https://github.com/markdalgleish/stellar.js
-////////////////////////////////////////////////////////////////////
-
 $.stellar({
-    // Set scrolling to be in either one or both directions
+    
     horizontalScrolling: false,
     verticalScrolling: true,
 });
 
-
-
-///////////////////////////////////////////////////////////
-// WOW animation scroll: https://github.com/matthieua/WOW
-///////////////////////////////////////////////////////////
-
 new WOW().init();
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// Counter-Up (requires jQuery waypoints.js plugin): https://github.com/bfintal/Counter-Up
-////////////////////////////////////////////////////////////////////////////////////////////
 
 $('.counter').counterUp({
     delay: 10,
     time: 2000
 });
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// Isotop Package
-////////////////////////////////////////////////////////////////////////////////////////////
 $(window).load(function() {
 $('.portfolio_menu ul li').click(function(){
 	$('.portfolio_menu ul li').removeClass('active_prot_menu');
@@ -162,13 +108,6 @@ $('#filters').on( 'click', 'a', function() {
 });
 });
 
-
-
-/////////////////////////
-// Scroll to top button
-/////////////////////////
-
-// Check to see if the window is top if not then display button
 $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
         $('.scrolltotop').fadeIn();
@@ -177,17 +116,11 @@ $(window).scroll(function(){
     }
 });
 
-// Click event to scroll to top
+
 $('.scrolltotop').click(function(){
     $('html, body').animate({scrollTop : 0}, 1500, 'easeInOutExpo');
     return false;
 });
-
-
-
-////////////////////////////////////////////////////////////////////
-// Close mobile menu when click menu link (Bootstrap default menu)
-////////////////////////////////////////////////////////////////////
 
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
